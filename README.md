@@ -123,17 +123,3 @@ You may find it useful to examine the 🤗 Transformers Python package when debu
 
 
 
-## Warning: Memory Usage
-
-There is currently 82G available on the "lisa" node in which this model is run. This should be more than enough memory but be mindful of memory usage. 
-
-I believe that doing `df -H .` gives the avaliable disk space and `du -h --max-depth=1 .` gives the space that the folders in the current directory uses up.
-
-
-
-
-
-
-## Additional References 
-
-
