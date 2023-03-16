@@ -1,0 +1,116 @@
+{
+    "config_name" : "tuner007/t5_abs_qa",
+    "model_name_or_path" : "tuner007/t5_abs_qa",
+    "tokenizer_name" : "tuner007/t5_abs_qa",
+    "cache_dir" : "cached_datasets/train_large_2",
+
+
+    "train_file" : "/home/shared/qabot/train_large_2/train.csv",
+    "validation_file" : "/home/shared/qabot/train_large_2/val.csv",
+    "test_file" : "/home/shared/qabot/train_large_2/test.csv",
+    "overwrite_cache" : true,
+    "max_seq_length": 512,
+    "padding_strategy": "longest" ,
+    "n_best_size": 20,
+    "max_answer_length": 250,
+
+    "output_dir" : "./results/final_checkpoint/",
+    "resume_from_checkpoint" : "/home/shared/qabot/checkpoint-18210/",
+    "overwrite_output_dir": true,
+    "do_train": false,
+    "do_eval": true,
+    "do_predict": false,
+    "evaluation_strategy": "no",
+    "eval_steps": 1,
+    "max_train_samples" : 50,
+    "max_eval_samples" : 50,
+    "max_predict_samples" : 50,
+
+
+    "prediction_loss_only": false,
+    "per_device_train_batch_size": 5,
+    "per_device_eval_batch_size": 5,
+    "per_gpu_train_batch_size": null,
+    "per_gpu_eval_batch_size": null,
+    "gradient_accumulation_steps": 1,
+    "eval_accumulation_steps": null,
+    "eval_delay": 0,
+
+    "learning_rate": 0.0001,
+    "num_train_epochs": 1,
+    "weight_decay": 0,
+    "adam_beta1": 0.9,
+    "adam_beta2": 0.999,
+    "adam_epsilon": 1e-08,
+    "max_grad_norm": 1.0,
+    "lr_scheduler_type": "linear",
+
+
+    
+    "logging_strategy": "steps",
+    "logging_first_step": false,
+    "logging_steps": 1821,
+
+    "logging_nan_inf_filter": true,
+    "warmup_ratio": 0.0,
+    "warmup_steps": 0,
+    "log_on_each_node": true,
+
+
+    "save_strategy": "no",
+    "save_steps": 1821,
+    "save_total_limit": 3,
+    "metric_for_best_model": "rouge1",
+    "greater_is_better": true,
+    "load_best_model_at_end" : true,
+
+    "remove_unused_columns": true,
+    "no_cuda": false,
+    "seed": 42,
+    "data_seed": null,
+    "bf16": false,
+    "fp16": false,
+    "fp16_opt_level": "O1",
+    "half_precision_backend": "auto",
+    "bf16_full_eval": false,
+    "fp16_full_eval": false,
+    "tf32": null,
+    "local_rank": -1,
+    "xpu_backend": null,
+    "tpu_num_cores": null,
+    "tpu_metrics_debug": false,
+    "debug": [],
+    "dataloader_drop_last": false,
+    "dataloader_num_workers": 0,
+    "past_index": -1,
+    "disable_tqdm": false,
+
+    "predict_with_generate": true,
+    "generation_max_length": 200,
+    "generation_num_beams": 4, 
+    "num_return_sequences" : 4,
+    "top_k" : 50,
+    "top_p" : 0.9,
+    "early_stopping" : false,
+    "do_sample" : true,
+    "no_repeat_ngram_size" : 6, 
+    "label_names": null,
+   
+    "ignore_data_skip": false,
+    "sharded_ddp": [],
+    "deepspeed": null,
+    "label_smoothing_factor": 0.0,
+
+    "optim": "adamw_torch",
+    "adafactor": false,
+    "group_by_length": false,
+    "length_column_name": "length",
+
+    "run_name" : "t5-abs on large_2",
+    "tags" : ["4 beams"],
+    "group" : "t5-abs"
+    
+
+}
+
+       
